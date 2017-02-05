@@ -8,12 +8,12 @@
 
 #include "Object.h"
 
-#include <set>
+#include <vector>
 
 class MemCplus{
 
 private:
-	static std::set<Object* > _refs;
+	static std::vector<Object* > _refs;
 
 public:
 	static void* PutIn(void* ref);
