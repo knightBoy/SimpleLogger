@@ -7,6 +7,7 @@
 #define DOUBLE_BUFFER_QUEUE_H
 
 #include "ScopeGuard.h"
+#include "Object.h"
 
 #include <vector>
 #include <queue>
@@ -15,7 +16,7 @@
 #include <functional>
 
 template<typename T>
-class DoubleBufferQueue {
+class DoubleBufferQueue : public Object{
 
 private:
 	std::vector<std::queue<T>>  queues_;

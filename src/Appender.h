@@ -30,7 +30,7 @@ private:
 	std::queue<std::string > _cache_queue;
 
 public:
-	explicit Appender( Log_Level prior, std::string log_file);
+	explicit Appender(Log_Level prior, std::string log_file);
 	explicit Appender(Log_Level prior, std::string& log_file, Layout* layout);
 
 	~Appender();
