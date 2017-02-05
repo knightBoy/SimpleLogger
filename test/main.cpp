@@ -2,7 +2,7 @@
 #include "SimpleLoggerInt.h"
 
 int main(){
-	Appender* appender1 = new Appender(DEBUG, "../log/log1.log");
+	Appender* appender1 = new Appender(DEBUG, "../log/log.log");
 	Logger* logger = new Logger("logger");
 	logger->AddAppender("appender1", appender1);
 	logger->Start();

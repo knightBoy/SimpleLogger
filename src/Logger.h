@@ -8,6 +8,8 @@
 
 #include <map>
 #include <atomic>
+#include <mutex>
+#include <condition_variable>
 
 /*tasks which are put into the double buffer queue*/
 typedef struct Logtask{
@@ -26,6 +28,8 @@ private:
 	DoubleBufferQueue<Logtask* >* _double_buffer_queue;
 
 	std::atomic<bool> _thread_over;
+	std::mutex _mtx;
+	std::condition_variable _cv;
 
 public:
 	explicit Logger(const std::string& name);
