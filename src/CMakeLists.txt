@@ -1,4 +1,4 @@
-#查找指定目录下所有的源文件，并赋值给变量
+﻿#查找指定目录下所有的源文件，并赋值给变量
 AUX_SOURCE_DIRECTORY(. SRC_LIST)
 
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

@@ -8,7 +8,7 @@
 
 Appender::Appender(Log_Level prior, std::string log_file){
 	_priority = prior;
-	_layout = (Layout*)MemCplus::PutIn(new Layout());
+	_layout = new Layout();
 	_log_file = log_file;
 	MemCplus::PutIn(this);
 	Init();
