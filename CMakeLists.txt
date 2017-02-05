@@ -1,0 +1,15 @@
+PROJECT (SimpleLogger)
+
+#设置要求的最低cmake版本 
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+#设置编译器
+SET(CMAKE_CXX_COMPILER g++)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
+
+#设置头文件
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
+#设置包含要编译源码的子目录和中间文件输出路径
+ADD_SUBDIRECTORY(src ${PROJECT_SOURCE_DIR}/src/build)
+ADD_SUBDIRECTORY(test ${PROJECT_SOURCE_DIR}/test/build)
