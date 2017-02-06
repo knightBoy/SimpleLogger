@@ -42,9 +42,7 @@ void Logger::Logging(const enum Log_Level log_level, std::string msg){
 /*shutdown the logger, so free memorry*/
 void Logger::Shutdown(){
 	_thread_over = true;
-	std::unique_lock<std::mutex> lck(_mtx);
-	while(_thread_over)
-		_cv.wait(lck);
+	while(_thread_over);
 	MemCplus::FreeRefs();
 }
 
@@ -81,7 +79,5 @@ void Logger::LogThread(){
 			_double_buffer_queue->swap();
 		}
 	}
-	std::unique_lock<std::mutex> lck(_mtx);
 	_thread_over = false;
-	_cv.notify_all();
 }
