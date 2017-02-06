@@ -42,7 +42,8 @@ void Logger::Logging(const enum Log_Level log_level, std::string msg){
 /*shutdown the logger, so free memorry*/
 void Logger::Shutdown(){
 	_thread_over = true;
-	while(_thread_over);
+	while(_thread_over)
+		std::this_thread::sleep_for(std::chrono::milliseconds(400));
 	MemCplus::FreeRefs();
 }
 
