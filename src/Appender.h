@@ -13,7 +13,7 @@
 
 #include <queue>
 
-class Appender : public Object{
+class DLL_LOGGER_API Appender : public Object{
 
 private:
 	std::string name;

@@ -20,7 +20,7 @@ typedef struct Logtask{
 	std::string log_msg;
 }Logtask;
 
-class Logger : public Object{
+class DLL_LOGGER_API Logger : public Object{
 
 private:
 	std::string _name;

@@ -14,4 +14,11 @@ enum Log_Level{
 	FATAL
 };
 
+//_MSC_VER
+#ifdef _WIN32
+#define DLL_LOGGER_API __declspec(dllexport)
+#else
+#define DLL_LOGGER_API 
+#endif
+
 #endif

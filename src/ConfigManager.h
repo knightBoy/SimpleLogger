@@ -7,11 +7,12 @@
 #define CONFIG_MANAGER_H
 
 #include "Object.h"
+#include "define.h"
 
 #include <string>
 #include <map>
 
-class ConfigManager : public Object{
+class DLL_LOGGER_API ConfigManager : public Object{
 
 private:
 	std::string _config_file_name;

@@ -6,7 +6,9 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-class Object{
+#include "define.h"
+
+class DLL_LOGGER_API Object{
 
 public:
 	virtual ~Object(){}

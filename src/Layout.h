@@ -6,10 +6,11 @@
 #define LAYOUT_H
 
 #include "Object.h"
+#include "define.h"
 
 #include <string>
 
-class Layout : public Object{
+class DLL_LOGGER_API Layout : public Object{
 
 public:
 	explicit Layout();
